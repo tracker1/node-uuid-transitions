@@ -39,13 +39,13 @@ Returns null or a uuid version of the input.
 
 ```javascript
 uuidconvert.toUuid('-1234123456789012')
-\\ '00000000-0000-0001-1234-123456789012'
+// '00000000-0000-0001-1234-123456789012'
 
 uuidconvert.toUuid(12345678901234567890)
-\\ null -- out of range
+// null -- out of range
 
 uuidconvert.toUuid('a1b2c3d4-1111-2222-3333-1234567890ab')
-\\ 'a1b2c3d4-1111-2222-3333-1234567890ab'
+// 'a1b2c3d4-1111-2222-3333-1234567890ab'
 ```
 
 #### .fromUuid(input)
@@ -55,16 +55,16 @@ Converts the transition-uuid input to a Long (52-bit range limited)
 
 ```javascript
 uuidconvert.fromUuid('00000000-0000-0001-1234-123456789012');
-\\ -1234123456789012
+// -1234123456789012
 
 uuidconvert.fromUuid('a00000000-0000-0000-0000-000000000000');
-\\ null - invalid structure
+// null - invalid structure
 
 uuidconvert.fromUuid('000000000-0000-0000-9999-999999999999');
-\\ null - out of range
+// null - out of range
 
 uuidconvert.fromUuid(1234);
-\\ null - invalid structure
+// null - invalid structure
 ```
 
 #### .toLong(input)
@@ -74,11 +74,11 @@ Converts from either a numeric value, or from a transition-uuid to a long (52-bi
 
 ```javascript
 uuidconvert.toLong(1234);
-\\ 1234
+// 1234
 
 uuidconvert.toLong('00000000-0000-0001-1234-123456789012');
-\\ -1234123456789012
+// -1234123456789012
 
 uuidconvert.fromUuid('a00000000-0000-0000-0000-000000000000');
-\\ null - invalid structure
+// null - invalid structure
 ```
