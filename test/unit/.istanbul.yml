@@ -1,0 +1,9 @@
+instrumentation:
+  root: lib/
+reporting:
+  dir: "./coverage/unit"
+  watermarks:
+    statements: [99.99999,100]
+    lines: [99.99999,100]
+    functions: [99.99999,100]
+    branches: [99.99999,100]

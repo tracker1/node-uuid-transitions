@@ -1,0 +1,44 @@
+{
+  "name": "uuid-transitions",
+  "version": "0.2.0",
+  "description": "Utilities for uuid transitions (to/from long)",
+  "main": "lib/index.js",
+  "scripts": {
+    "jshint": "jshint lib && jshint --config test/.jshintrc test",
+    "unit-jshint": "jshint lib && jshint --config test/.jshintrc test/unit",
+    "unit-test": "mocha -R spec ./test/unit/**/*.tests.js",
+    "unit-cover": "istanbul cover --config test/unit/.istanbul.yml ./node_modules/mocha/bin/_mocha -- -R spec ./test/unit/**/*.tests.js",
+    "unit": "npm run unit-jshint && npm run unit-test",
+    "report": "istanbul report --dir coverage/all cobertura && istanbul report --dir coverage/all lcov",
+    "check-coverage": "istanbul check-coverage --statements 100 --functions 100 --branches 100 --lines 100 || node scripts/launch-coverage-in-browser",
+    "test": "npm run unit-jshint && npm run unit-cover && npm run report && npm run check-coverage",
+    "watch": "mocha -R spec --debug-brk -w ./test/unit/**/*.tests.js"
+  },
+  "devDependencies": {
+    "mocha": "^1.20.1",
+    "chai": "1.8.1",
+    "sinon": "1.7.3",
+    "sinon-chai": "2.5.0",
+    "istanbul": "~0.2.4",
+    "mocha-istanbul": "~0.2.0",
+    "jshint": "2.3.0",
+    "open": "0.0.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tracker1/node-uuid-transitions.git"
+  },
+  "keywords": [
+    "uuid",
+    "guid",
+    "integer",
+    "transitions",
+    "conversion"
+  ],
+  "author": "Michael J. Ryan <tracker1@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tracker1/node-uuid-transitions/issues"
+  },
+  "homepage": "https://github.com/tracker1/node-uuid-transitions"
+}
