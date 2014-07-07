@@ -1,6 +1,6 @@
 {
   "name": "uuid-transitions",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Utilities for uuid transitions (to/from long)",
   "main": "lib/index.js",
   "scripts": {
