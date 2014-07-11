@@ -73,12 +73,15 @@ Converts from either a numeric value, or from a transition-uuid to a long (52-bi
 * if invalid or out of range, null is returned
 
 ```javascript
-uuidconvert.toLong(1234);
-// 1234
+uuidconvert.toLong("-1234");
+// -1234
+
+uuidconvert.toLong(122.6);
+// 123 - already a number, rounds
 
 uuidconvert.toLong('00000000-0000-0001-1234-123456789012');
 // -1234123456789012
 
-uuidconvert.fromUuid('a00000000-0000-0000-0000-000000000000');
+uuidconvert.toLong('a00000000-0000-0000-0000-000000000000');
 // null - invalid structure
 ```
